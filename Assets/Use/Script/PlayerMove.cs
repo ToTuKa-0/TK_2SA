@@ -30,6 +30,8 @@ public class PlayerMove : MonoBehaviour
     {
         MoveUpdate(); //左右移動
 
+        float hrkey = Input.GetAxis("Horizontal"); //InputManagerからひっぱる
+
         //ジャンプ
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded()) //スペースを押されたか+まだ地面にいるか
         {
@@ -38,8 +40,14 @@ public class PlayerMove : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jump_f); //上方向にジャンプの初速を加える
         }
 
-        //ボタンを押している間に追加の力を加える
-        if (Input.GetKey(KeyCode.Space) && jumping)
+        //ジャンプ
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            jumping = false;
+        }
+
+        //移動
+        if (Input.GetKey(KeyCode.Space) && jumping) //ボタンを押している間に追加の力を加える
         {
             if (jump_t > 0)
             {
@@ -50,11 +58,6 @@ public class PlayerMove : MonoBehaviour
             {
                 jumping = false; //時間経過で終了
             }
-        }
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            jumping = false;
         }
     }
 

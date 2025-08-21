@@ -8,9 +8,9 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D rb; //Rigidbody2D参照
     private SpriteRenderer sr; //SpriteRenderer参照
 
-    private int jump_f = 1; //ジャンプの初速
+    private float jump_f = 1f; //ジャンプの初速
     private float jump_m = 0.5f; //ボタンを押せる長さ
-    private int jump_p = 5; //ジャンプ中に加わる力
+    private int jump_p = 3; //ジャンプ中に加わる力
     bool jumping; //true(空中)かfolse(地面)しか受け付けない
     private float jump_t; //残りジャンプ可能時間
 

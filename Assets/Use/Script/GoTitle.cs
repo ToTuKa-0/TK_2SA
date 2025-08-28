@@ -5,6 +5,6 @@ public class GoTitle : MonoBehaviour
 {
     public void LoadScene()
     {
-        SceneManager.LoadScene("Title");
+        SceneManager.LoadScene("Title"); //ƒ^ƒCƒgƒ‹‚Ö–ß‚é
     }
 }

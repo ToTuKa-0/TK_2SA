@@ -9,6 +9,6 @@ public class RetryGame : MonoBehaviour
 
     public void LoadScene()
     {
-        SceneManager.LoadScene(TitleName);
+        SceneManager.LoadScene(TitleName); //該当シーンをロード
     }
 }

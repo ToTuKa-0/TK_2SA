@@ -15,7 +15,7 @@ public class GameOverSystem : MonoBehaviour
 
     void Start()
     {
-        resultPanel.SetActive(false); // ‰Šúó‘Ô‚Å”ñ•\¦
+        resultPanel.SetActive(false); //‰Šúó‘Ô‚Å”ñ•\¦
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
